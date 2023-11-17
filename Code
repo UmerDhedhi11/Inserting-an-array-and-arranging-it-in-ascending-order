@@ -1,0 +1,17 @@
+array = [" "]* 10
+
+for index in range(len(array)):
+    number = int(input("Enter a number "))
+    array[index] = number
+
+
+
+for x in range(len(array)):
+    item = array[x]
+    currentitem = x - 1
+    while(array[currentitem] > item and currentitem > -1):
+        array[currentitem + 1] = array[currentitem]
+        currentitem = currentitem - 1
+    array[currentitem + 1] = item
+
+print(array)
